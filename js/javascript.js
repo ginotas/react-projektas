@@ -35,6 +35,7 @@ constructorDOM("div", "this is component", "root");
 */
 
 
+/*
 
 document.getElementById('root').appendChild(document.createElement('div').appendChild(document.createTextNode('Labas')));
 
@@ -47,6 +48,8 @@ const createDivText = (text) => {
 }
 
 const root = document.querySelector("#root");
+
+root.appendChild(createDivText("valio"));
 
 
 const data = ['Labas', 'pats', 'tu labas'];
@@ -97,3 +100,26 @@ const sorting =  data.sort( function(a,b) {
     return a.charAt(2).toLowerCase().charCodeAt() - b.charAt(2).toLowerCase().charCodeAt()
 
   })
+
+*/
+  const animals = ["kiskis", "lape", "anakonda", "sausumu veplys", "bebras"];
+
+  animals.forEach((value, index) => console.log(`stalcius: ${index} jame guli ${value}`));
+
+  console.log(animals.slice());
+
+  animals.sort((a, b) => b.length - a.length);
+
+  console.log(animals);
+
+  // map
+  console.log("--------------------------");
+
+  animals.forEach((value, index) => console.log(`stalcius: ${index} jame guli ${value}`));
+
+console.log("--------------------------");
+
+animals.map((value, index) => console.log(`stalcius: ${index} jame guli ${value}`));
+
+
+
