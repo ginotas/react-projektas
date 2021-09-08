@@ -1,12 +1,16 @@
-import Component from "./Component";
-import Stalas from "./stalas";
+
+import Kvadratas from "./kvadratas";
 
 
-function App(props) {
+const data = ["rudasis", "juodasis", "baltasis"];
+
+function App() {
     return (
         <>
-        <Component per={props.per} name={"Petras"} surname={"Petrovicius"}></Component>
-        <Stalas per={props.per} name={"Petras"} surname={"Petrovicius"}></Stalas>
+      
+        {data.map((b, i) => <Kvadratas key={i} bebras={b} /> )}
+      
+       
         </>
         );
     }

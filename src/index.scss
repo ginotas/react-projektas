@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.kvadratas {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  span {
+    font-size: 20px;
+  }
+  &.br {
+    background-color: greenyellow;
+  }
+
+}
+

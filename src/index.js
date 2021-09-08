@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,7 +8,7 @@ import App from "./components/app";
 
 
 ReactDOM.render(
-  <App per={"griovi"}/>,
+  <App/>,
   document.getElementById('root')
 );
 
