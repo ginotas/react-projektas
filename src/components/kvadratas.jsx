@@ -1,9 +1,9 @@
-import Bebras from "./bebras";
+import Bebras from "./Bebras";
 
 // KOMPONENTAS
 
 function Kvadratas(props) {
-    if (props.bebras == "juodasis") {
+    if (props.bebras === "juodasis") {
     return (
         <div className="kvadratas br">
         <b><Bebras bebras={props.bebras}/></b>

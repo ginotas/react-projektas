@@ -1,5 +1,5 @@
 
-import Kvadratas from "./kvadratas";
+import Kvadratas from "./Kvadratas";
 
 
 const data = ["rudasis", "juodasis", "baltasis"];
