@@ -106,13 +106,43 @@ body {
 
 .nice-d {
 
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: pink;
   &.green {
     background-color: blue;
   }
 
+}
+
+.bin {
+  margin: 20px;
+  padding: 10px;
+  border: 3px dotted orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rutulys {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mygtukas {
+  border: none;
+  background-color: purple;
+  padding: 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: yellow;
+  border-radius: 10px;
+  cursor: pointer;
 }
