@@ -128,12 +128,22 @@ body {
 }
 
 .rutulys {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  input {
+    position: absolute;
+    
+    font-size: 20px;
+    top: 50px;
+    outline: none;
+    border: none;
+    text-align: center;
+  }
 }
 
 .mygtukas {
@@ -145,4 +155,17 @@ body {
   color: yellow;
   border-radius: 10px;
   cursor: pointer;
+  margin: 10px;
+  position: relative;
+  .reg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 5px;
+  }
+  .inputbutonas {
+    position: absolute;
+    top: 80px;
+  }
 }
+
