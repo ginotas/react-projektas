@@ -1,4 +1,5 @@
 import React from 'react';
+
 class SmallAnimal extends React.Component {
 
     constructor(props) {
