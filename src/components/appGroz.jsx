@@ -9,27 +9,17 @@ function App() {
 useEffect(() => {
     console.log("start");
 
-    axios.get('https://jsonplaceholder.typicode.com/todos')
+    axios.get('https://in3.dev/knygos/types/')
     .then(function (response) {
     console.log(response.data);
     setTodos(response.data)
   });
 }, []);
 
-    const sniuriukasTodui = (id) => {
-        const todosCopy = todos.slice();
-        for (let i=0; i < todosCopy.length; i++) {
-            if (id === todosCopy[i].id) {
-                todosCopy[i].completed = !todosCopy[i].completed;
-                break
-            }
-        }
-        setTodos(todosCopy);
-    }
 
     return (
         <div className="todo-container">
-                {todos.map((todo) => (<Todo key={todo.id} data={todo} sniuriukas={sniuriukasTodui}></Todo>))}
+                {todos.map((todo) => (<Todo key={todo.id} data={todo}></Todo>))}
         </div>
        
         );
