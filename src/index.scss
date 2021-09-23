@@ -273,3 +273,62 @@ body {
     }
   }
 }
+
+.books-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 15%;
+  .book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid brown;
+    border-radius: 5px;
+    width: 250px;
+    height: 350px;
+    background-color: burlywood;
+    img {
+      height: 300px;
+      width: auto;
+    }
+    .author {
+      font-style: italic;
+      font-size: 15px;
+      color: grey;
+    }
+    .title {
+      font-size: 18px;
+      color: black;
+    }
+    .price {
+      font-size: 20px;
+      color: red;
+      font-weight: bold;
+    }
+    .cat {
+            margin: 5px;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            border-radius: 20px;
+            color: black;
+    }
+  }
+
+}
+
+.sorter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: burlywood;
+}
