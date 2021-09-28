@@ -19,16 +19,3 @@ function Todo(props) {
 
 export default Todo;
 
-/*
- nd:  https://in3.dev/knygos/
-
- Gražiais su CSS padaryti prekių sąrašą.
-    Pridėti mygtuką pirkti. 
-     (mygtukas nieko gali nedaryti, bet gali kazka daryti)
-
-     tips: img taga uzdaryti!
-     vardu komponento nereikes, isimti (<User>)
-     sniuriko nereikia, isimti. 
-
-
-*/

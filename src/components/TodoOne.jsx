@@ -21,5 +21,4 @@ const {todoId} = useParams();
     );
 }
 
-
 export default Todo;
