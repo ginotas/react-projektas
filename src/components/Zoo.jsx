@@ -14,8 +14,8 @@ function Zoo() {
         <div className="zoo">
             <h1>Welcome to the ZOO</h1>
             <Switch>
-                <Route path={"/:id"}>
-                    <Animal></Animal>
+                <Route path={"/animal/:id"}>
+                    <Animal animals={animals}></Animal>
                 </Route>
                 <Route path={"/"}>
                     <ul>
