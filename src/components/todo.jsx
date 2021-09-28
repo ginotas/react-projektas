@@ -1,30 +1,23 @@
 
-import React, {} from "react";
-import User from "./user";
+import User from './User';
+import {Link} from 'react-router-dom';
 
 function Todo(props) {
 
     return (
         <div className="todo">
-            <div className="id">{props.data.id}</div>
-            <User id={props.data.userId}></User>  
+            <Link to={'/'+props.data.id}><div className='id'>{props.data.id}</div></Link>
+            <User id={props.data.userId}></User>
             <div className="title">{props.data.title}</div>
-            <div className="status" onClick={() => props.sniuriukas(props.data.id)} style={
-                {backgroundColor: props.data.completed === false ? "red" : "green"}
-                }>{props.data.status}</div>
+            <div className="status" onClick={()=>props.sniuriukas(props.data.id)} style={
+                {backgroundColor: props.data.completed === false ? 'red' : 'green'}
+                }></div>
         </div>
-    )
+    );
 }
 
 
-
-
-
-
-
-
 export default Todo;
-
 
 /*
  nd:  https://in3.dev/knygos/
