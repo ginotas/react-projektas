@@ -1,53 +1,62 @@
-import Field from "./Field";
-import { useState } from "react";
-import { ThemeContext, ThemeSelect } from "../Providers";
-
-const letters = ["L", "a", "b", "a", "s"];
-
- const theme = 
-    [
-    
-        {
-        color: "red",
-        border: "2px solid red"
-    },
-    {
-        color: "green",
-        border: "2px solid green"
-    },
-    {
-        color: "blue",
-        border: "2px solid blue"
-    }
-
-    ]
-;
-
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import Post from "./Post";
+import NewPost from "./NewPost";
 
 
 function App() {
 
+    const [posts, setPosts] = useState([]);
+  
+    useEffect(() => {
+       
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(function (response) {
+            console.log(response.data);
+            setPosts(response.data);
+        })
+    }, []);
 
-    const [style, setStyle] = useState();
+    const doDelete = id => {
+        axios.delete('https://jsonplaceholder.typicode.com/posts/' + id, {
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
 
-    const changeTheme = t => {
-        setStyle(t);
+    const doAdd = (data) => {
+        axios.post('https://jsonplaceholder.typicode.com/posts/', data)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
 
+    const crud = {
+        delete: doDelete
+    }
+
 
     return (
-        <>
-        <ThemeContext.Provider value={theme} >
-        <ThemeSelect.Provider value={style}>  
-       <Field letters={letters}></Field>
-       <button onClick={() => changeTheme(0)}>Theme 1</button>
-       <button onClick={() => changeTheme(1)}>Theme 2</button>
-       <button onClick={() => changeTheme(2)}>Theme 3</button>
-       </ThemeSelect.Provider>
-       </ThemeContext.Provider>
-        </>
+        <div>
+            <div className="new-post-container">
+                <NewPost add={doAdd}></NewPost>
+            </div>
+            <div className="posts-container">
+                {posts.map((post) => (<Post key={post.id} data={post} crud={crud}></Post>))}
+            </div>
+        </div>
+       
         );
     }
     
         export default App;
+
+    
