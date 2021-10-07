@@ -1,6 +1,3 @@
-
-
-
 function Post({data, crud}) {
 
     return (
@@ -11,12 +8,11 @@ function Post({data, crud}) {
             <div className="edit">
                 <h3>Edit</h3>
 
-                <button className="del" onClick={() => crud.delete(data.id)}>Delete</button>
+                <button className="del" onClick={()=>crud.delete(data.id)}>Delete</button>
+                <button className="del" onClick={()=>crud.open(data)}>Edit</button>
             </div>
         </div>
     );
 }
 
-
 export default Post;
-
